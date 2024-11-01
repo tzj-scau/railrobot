@@ -1,0 +1,9 @@
+<library path="orbbec_camera_node">
+  <class name="orbbec_camera_node/OrbbecCameraNode"
+         type="orbbec_camera_node::OrbbecCameraNode"
+         base_class_type="rclcpp::Node">
+    <description>
+      Orbbec camera driver node for rail robot inspection system.
+    </description>
+  </class>
+</library>

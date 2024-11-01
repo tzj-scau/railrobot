@@ -1,0 +1,7 @@
+# Request
+int32 position_id
+---
+# Response
+bool success
+string message
+string data

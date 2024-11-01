@@ -1,0 +1,3 @@
+int32 position_id
+float32 position_value
+string position_name

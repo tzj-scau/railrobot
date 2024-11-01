@@ -1,0 +1,18 @@
+rail_robot_inspection/
+├── package.xml
+├── setup.py
+├── resource/
+│   └── rail_robot_inspection
+├── launch/
+│   └── my_launch_file.launch.py
+├── config/
+│   └── my_config.yaml
+
+│   rail_robot_inspection/
+│       ├── __init__.py
+│       ├── rail_control_node.py
+│       ├── orbbec_camera_node.py
+│       ├── thermal_camera_node.py
+│       └── serial_bridge_node.py
+└── tests/
+    └── test_rail_robot_inspection.py

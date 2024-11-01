@@ -1,0 +1,73 @@
+rail_robot:
+  motor_driver:
+    port: '/tmp/vserial2'           # MotorDriver 使用的串口
+    slave_address: 1                # Modbus 通信的从站地址
+    baud_rate: 9600                 # 通信的波特率
+  positions: [0, 1000, 2000, 3000]
+  inspection_mode: "scheduled"  # 可以是 "immediate" 或 "scheduled"
+  immediate_interval: 60.0  # 秒，用于 "immediate" 模式
+  daily_schedule: '[{"time": "08:00", "type": "full_inspection"}, {"time": "12:00", "type": "quick_inspection"}]'
+
+inspection_types:
+  full_inspection: ["move", "gas", "camera", "thermal"]
+  quick_inspection: ["move", "gas", "thermal"]
+  gas_only: ["gas"]
+
+orbbec_camera:
+  device_id: 0
+  camera_name: camera
+  enable_color: true
+  enable_depth: true
+  color_width: 640
+  color_height: 480
+  color_fps: 30
+  depth_width: 640
+  depth_height: 480
+  depth_fps: 30
+  enable_frame_sync: true
+  align_mode: SW
+  enable_laser: true
+  log_level: info
+
+  # 图像质量参数
+  enable_noise_removal_filter: true
+  noise_removal_filter_min_diff: 256
+  noise_removal_filter_max_size: 80
+
+  # 相机控制参数
+  enable_auto_exposure: true
+  enable_auto_white_balance: true
+
+  # 错误处理参数
+  connection_retry_count: 3
+  connection_timeout: 5.0
+
+thermal_camera:
+  channel_id: 0
+  brightness: 50
+  contrast: 50
+  
+gas_sensor:
+  port: "/dev/ttyUSB0"
+  baud_rate: 9600
+  slave_address: 1
+  
+temp_humidity_sensor:
+  port: "/dev/ttyUSB1"
+  baud_rate: 9600
+  slave_address: 1
+  
+data_upload:
+  url: "http://your-upload-url.com"
+  retry_attempts: 3
+  retry_delay: 5  # 秒
+
+# 其他节点的配置...
+
+serial_bridge:
+  system_port: "/dev/ttySC0"
+  virtual_port: "/tmp/vserial1"
+  virtual_port_pair: "/tmp/vserial2"
+  baud_rate: 9600
+
+# 其他节点的配置...

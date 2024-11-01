@@ -1,0 +1,26 @@
+camera_name: camera
+enable_color: true
+enable_depth: true
+color_width: 640
+color_height: 480
+color_fps: 30
+depth_width: 640
+depth_height: 480
+depth_fps: 30
+enable_frame_sync: true
+align_mode: SW
+enable_laser: true
+log_level: info
+
+# 图像质量参数
+enable_noise_removal_filter: true
+noise_removal_filter_min_diff: 256
+noise_removal_filter_max_size: 80
+
+# 相机控制参数
+enable_auto_exposure: true
+enable_auto_white_balance: true
+
+# 错误处理参数
+connection_retry_count: 3
+connection_timeout: 5.0

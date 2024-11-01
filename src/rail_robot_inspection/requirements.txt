@@ -1,0 +1,33 @@
+pip install pytest pytest-mock
+source /opt/ros/humble/setup.bash
+sudo apt install python3-usb
+pip install plyfile
+python3 -m pip install plyfile --break-system-packages
+apt-get update -y
+apt-get install -y libusb-1.0-0-dev libturbojpeg-dev
+python3 -m pip install pupil-labs-uvc --break-system-packages
+python3 -m pip install rich --break-system-packages
+python3 -m pip install minimalmodbus --break-system-packages
+python3 -m pip install pyserial --break-system-packages
+python3 -m pip install numpy --break-system-packages
+
+# 激活虚拟环境（如果使用）
+source ~/venv/ros2_ws/bin/activate
+
+# 安装 rich
+pip install rich -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 安装 minimalmodbus
+pip install minimalmodbus -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 安装 pyserial
+pip install pyserial -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 安装 numpy
+pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install pupil-labs-uvc   -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip install pillow  -i https://pypi.tuna.tsinghua.edu.cn/simple
+apt-get install socat

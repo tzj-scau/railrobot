@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rail_robot_inspection</name>
+  <version>0.1.0</version>
+  <description>Rail robot inspection package for ROS2, leveraging sensors to inspect rail infrastructure using a mobile robot platform.</description>
+
+  <!-- Maintainer Information -->
+  <maintainer email="your.email@example.com">Your Name</maintainer>
+
+  <!-- License -->
+  <license>Apache-2.0</license>
+
+  <!-- URLs for documentation, bugtracker, and repository -->
+  <url type="website">https://your_project_website.com</url>
+  <url type="bugtracker">https://github.com/your_project/repository/issues</url>
+  <url type="repository">https://github.com/your_project/repository</url>
+
+  <!-- Build tool dependency for Python projects -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <build_depend>rosidl_default_generators</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>rail_robot_inspection_msgs</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>rclpy</build_depend>
+
+  <!-- Execution dependencies -->
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>rail_robot_inspection_msgs</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+
+  <!-- Test dependencies -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_cmake_pytest</test_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>launch_testing</test_depend>
+
+  <!-- Export section -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
